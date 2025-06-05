@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SomuOS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Boot Screen -->
+    <div id="boot-screen">
+        <div class="boot-container">
+            <div class="boot-logo">
+                <div class="somu-logo">S</div>
+                <div class="boot-text">SomuOS</div>
+            </div>
+            <div class="boot-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="boot-status">Starting SomuOS...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop -->
+    <div id="desktop" class="hidden">
+        <!-- Menu Bar -->
+        <div id="menu-bar">
+            <div class="menu-left">
+                <div class="somu-logo-small">S</div>
+                <div class="menu-item active">Finder</div>
+                <div class="menu-item">File</div>
+                <div class="menu-item">Edit</div>
+                <div class="menu-item">View</div>
+                <div class="menu-item">Go</div>
+                <div class="menu-item">Window</div>
+                <div class="menu-item">Help</div>
+            </div>
+            <div class="menu-right">
+                <div class="menu-icon" id="spotlight-btn">🔍</div>
+                <div class="menu-icon">🔋</div>
+                <div class="menu-icon">📶</div>
+                <div class="menu-icon">🔊</div>
+                <div class="menu-time" id="menu-time"></div>
+            </div>
+        </div>
+
+        <!-- Spotlight Search -->
+        <div id="spotlight" class="hidden">
+            <div class="spotlight-container">
+                <input type="text" id="spotlight-input" placeholder="Spotlight Search">
+                <div class="spotlight-results" id="spotlight-results"></div>
+            </div>
+        </div>
+
+        <!-- Launchpad -->
+        <div id="launchpad" class="hidden">
+            <div class="launchpad-container">
+                <div class="launchpad-grid">
+                    <div class="app-icon" data-app="finder">
+                        <div class="icon">📁</div>
+                        <div class="label">Finder</div>
+                    </div>
+                    <div class="app-icon" data-app="safari">
+                        <div class="icon">🧭</div>
+                        <div class="label">Safari</div>
+                    </div>
+                    <div class="app-icon" data-app="mail">
+                        <div class="icon">✉️</div>
+                        <div class="label">Mail</div>
+                    </div>
+                    <div class="app-icon" data-app="calendar">
+                        <div class="icon">📅</div>
+                        <div class="label">Calendar</div>
+                    </div>
+                    <div class="app-icon" data-app="calculator">
+                        <div class="icon">🧮</div>
+                        <div class="label">Calculator</div>
+                    </div>
+                    <div class="app-icon" data-app="notes">
+                        <div class="icon">📝</div>
+                        <div class="label">Notes</div>
+                    </div>
+                    <div class="app-icon" data-app="photos">
+                        <div class="icon">🖼️</div>
+                        <div class="label">Photos</div>
+                    </div>
+                    <div class="app-icon" data-app="music">
+                        <div class="icon">🎧</div>
+                        <div class="label">Music</div>
+                    </div>
+                    <div class="app-icon" data-app="settings">
+                        <div class="icon">⚙️</div>
+                        <div class="label">System Preferences</div>
+                    </div>
+                    <div class="app-icon" data-app="terminal">
+                        <div class="icon">⬛</div>
+                        <div class="label">Terminal</div>
+                    </div>
+                    <div class="app-icon" data-app="tutorial">
+                        <div class="icon">📚</div>
+                        <div class="label">Tutorial</div>
+                    </div>
+                    <div class="app-icon" data-app="trash">
+                        <div class="icon">🗑️</div>
+                        <div class="label">Trash</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Windows Container -->
+        <div id="windows-container"></div>
+
+        <!-- Dock -->
+        <div id="dock">
+            <div class="dock-container">
+                <div class="dock-item" data-app="finder" title="Finder">📁</div>
+                <div class="dock-item" data-app="launchpad" title="Launchpad">🚀</div>
+                <div class="dock-item" data-app="safari" title="Safari">🧭</div>
+                <div class="dock-item" data-app="mail" title="Mail">✉️</div>
+                <div class="dock-item" data-app="calendar" title="Calendar">📅</div>
+                <div class="dock-item" data-app="calculator" title="Calculator">🧮</div>
+                <div class="dock-item" data-app="notes" title="Notes">📝</div>
+                <div class="dock-item" data-app="photos" title="Photos">🖼️</div>
+                <div class="dock-item" data-app="music" title="Music">🎧</div>
+                <div class="dock-item" data-app="settings" title="System Preferences">⚙️</div>
+                <div class="dock-separator"></div>
+                <div class="dock-item" data-app="terminal" title="Terminal">⬛</div>
+                <div class="dock-item" data-app="tutorial" title="Tutorial">📚</div>
+                <div class="dock-item" data-app="trash" title="Trash">🗑️</div>
+            </div>
+        </div>
+
+        <!-- Context Menu -->
+        <div id="context-menu" class="hidden">
+            <div class="context-item" data-action="new-folder">New Folder</div>
+            <div class="context-item" data-action="get-info">Get Info</div>
+            <div class="context-separator"></div>
+            <div class="context-item" data-action="change-wallpaper">Change Desktop Background...</div>
+            <div class="context-item" data-action="about">About SomuOS</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
